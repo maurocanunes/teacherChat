@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { View, TextInput, Button, FlatList, StyleSheet, Text } from 'react-native';
 
 import OpenAI from 'openai';
+const apiKey = process.env.EXPO_PUBLIC_OPENAI_API_KEY;
+        console.log('key------------------', apiKey);
 
 const openai = new OpenAI({
         organization:'',
-        apiKey:'',
+        apiKey: apiKey,
         dangerouslyAllowBrowser: true,
 });
 
